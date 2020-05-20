@@ -1,8 +1,6 @@
 
 import requests
 
-i=0
-
 email_user_t = "AbraKadabra@gmail.com"
 name_user_t = "Alex"
 sername_user_t = "Ivanov"
