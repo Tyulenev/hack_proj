@@ -1,5 +1,5 @@
 
-#import requests
+import requests
 
 i=0
 
@@ -48,11 +48,11 @@ while True:
     password = list_alphabet.__getitem__(0) * (length - count_of_pass_parts) + password
     print(length, i, password)
 
-    #response = requests.post('http://127.0.0.1:4000/auth',
-    #                         json={'login': 'cat', 'password': password})
-    #if response.status_code == 200:
-    #    print('Success!')
-    #    break
+    response = requests.post('http://127.0.0.1:4000/auth',
+                             json={'login': 'cat', 'password': password})
+    if response.status_code == 200:
+        print('Success!')
+        break
 
     if password == list_alphabet.__getitem__(-1) * length:
         #i = base*length
@@ -64,11 +64,8 @@ while True:
 
 
     if length>base: #May be changed
-        print("All combinations is here")
+        print("All combinations is here. Pass not found")
         break
 
-def delete_end_email(self, mail_in:str):
-    mail_out = ''
-    return int(mail_in.find("@"))
 
 
